@@ -22,13 +22,18 @@ class mybatisApplicationTest {
     void main() {
     }
 
-
+    /**
+     * 查询全部
+     */
     @Test
     void findAll(){
         List<User> users = mapper.selectList(null);
         users.forEach(System.out::println);
     }
 
+    /**
+     * 更新 通过id
+     */
     @Test
     void updateById(){
         User user = new User();
@@ -38,6 +43,9 @@ class mybatisApplicationTest {
         int i = mapper.updateById(user);
     }
 
+    /**
+     * 更新通过实体类
+     */
     @Test
     void update(){
         User user = new User();
@@ -49,4 +57,10 @@ class mybatisApplicationTest {
 
         System.out.println(update);
     }
+
+    @Test
+    void selectByid(){
+
+    }
+
 }
